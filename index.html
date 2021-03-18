@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>N.S. Music Player</title>
+    <link rel="shortcut icon" type="image/png" href="page-icon.svg">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap-grid.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+<section class="">
+
+    <div class="player">
+
+        <div class="main">
+
+            <div class="home-container">
+                <div class="home-header-box">
+                    <span>N.S. Music Player</span>
+                </div>
+            </div>
+            <audio></audio>
+            <!-- Thumbnail-box -->
+            <div class="thumbnail-box">
+                <div class="thumbnail"">
+                    <img style="background:url();
+                    background-size:cover;
+                    background-position:center;
+                    background-repeat:no-repeat;">
+                </div>
+            </div> <!-- Thumbnail-box -->
+
+            <div class="filler-box"></div>
+
+
+            <div class="controls-container">
+                <div class="seekbar" role="progressbar">
+                    <input type="range">
+                </div> 
+
+                    <div class="time-tracker-box">
+                        <span id="current-time" class="time">0:00</span>
+                        <span id="duration" class="time">0:0</span>
+                    </div>
+
+                <div class="details">
+                    <h2></h2>
+                    <p></p>
+                </div>
+
+                <div class="volume-box">
+                    <i class="fa fa-volume-up"></i>
+                    <input type="range" id="volume-slider" value="20" max="100">
+                    <output id="volume-output"> 
+                        20
+                    </output>
+                </div>
+
+                    <div class="controls">
+
+                        <!-- Shuffle -->
+                        <div class="shuffle-control">
+                            <svg class="control-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M16.808 4.655l2.069 1.978h-.527c-1.656 0-3.312.68-4.458 1.814L12.797 9.75l1.179 1.246 1.317-1.527c.764-.794 1.91-1.247 3.057-1.247h.55l-2.07 2.014 1.178 1.179 4.005-3.993-4.026-3.945-1.178 1.179zm1.974 10.998l-1.974-1.888 1.18-1.179 4.024 3.945-4.004 3.993-1.178-1.179 1.954-1.901h-.434c-1.656 0-3.312-.625-4.458-1.667L8.242 9.8C7.35 9.071 6.204 8.55 4.93 8.55H2l.006-1.794 2.965.003c1.784 0 3.312.521 4.459 1.563l5.904 6.185c.765.73 1.911 1.146 3.058 1.146h.39zm-9.02-2.092l-1.52 1.394c-.892.793-2.038 1.36-3.312 1.36H2v1.588h2.93c1.783 0 3.312-.567 4.459-1.701l1.537-1.396-1.164-1.245z" class="control-icon"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Prev -->
+                        <div class="prev-control">
+                            <svg class="control-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z" class="control-icon"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Play-Pause-Controls -->
+                        <div class="play-pause-control paused">
+                            <div class="play-pause">
+                                <!-- Play-Button -->
+                                <svg class="play-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M8 5v14l11-7z" class="control-icon"></path>
+                                </svg>
+                                <!-- Pause-Buotton -->
+                                <svg class="pause-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" class="control-icon"></path>
+                                </svg>
+                            </div> <!-- Play-Pause -->
+                        </div> <!-- Play-Pause-Controls -->
+
+                        <!-- Next -->
+                        <div class="next-control">
+                            <svg class="control-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M6 18l8.5-6L6 6v12zM16 6v12h2V6h-2z" class="control-icon"></path>
+                            </svg>
+                        </div>
+
+                        <!-- Repeat -->
+                        <div class="repeat-control">
+                            <svg class="control-button" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M3 6.929c0-.75.643-1.393 1.393-1.393h14.286L16.32 3.179 17.5 2l4.393 4.393-4.393 4.393-1.179-1.179L18.68 7.25H4.714V11H3V6.929zM2.107 17.607L6.5 13.214l1.179 1.179L5.32 16.75l13.965-.071v-3.965H21V17c0 .75-.643 1.393-1.393 1.393l-14.286.071 2.358 2.357L6.5 22l-4.393-4.393z" class="control-icon"></path>
+                            </svg>
+                        </div>
+
+                    </div> <!-- Controls  -->
+
+            </div> <!-- Controls-container -->
+
+        </div> <!-- Main -->
+
+
+        <div class="player-list">     
+            <div class="home-container">
+                <div class="home-header-box">
+                    <span>SMPlayer</span>
+                </div>
+            </div>  
+            <div class="toggle-box">
+                <div class="toggle-list">
+                    <i class="fa fa-angle-down"></i>
+                    <i class="fa fa-angle-up"></i>
+                </div>
+            </div>
+
+            <div class="list">
+            </div>
+        </div>
+
+    </div> <!-- Player -->
+
+</section>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
